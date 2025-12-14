@@ -91,7 +91,7 @@ button:active {
 }
 
 /* mobile */
-@media (max-width: 440px) {
+/* @media (max-width: 200px) {
   .calculator {
     width: 95%;
     padding: 18px;
@@ -104,7 +104,7 @@ button:active {
     padding: 14px 0;
     font-size: 1rem;
   }
-}
+} */
 
 /* smooth scroll for display overflow */
 .display::-webkit-scrollbar {
