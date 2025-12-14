@@ -37,3 +37,48 @@ function toggleSci() {
     b.style.display = sci ? "block" : "none";
   });
 }
+
+const SECRET_CODE = "676767";
+let inputBuffer = "";
+
+function add(val) {
+  const display = document.getElementById("display");
+
+  if (display.innerText === "0") display.innerText = val;
+  else display.innerText += val;
+
+  // secret listener (numbers only)
+  if (!isNaN(val)) {
+    inputBuffer += val;
+    if (!SECRET_CODE.startsWith(inputBuffer)) {
+      inputBuffer = val;
+    }
+    if (inputBuffer === SECRET_CODE) {
+      window.open("secret.html", "_blank");
+    }
+  }
+}
+
+const CHRISTMAS_CODE = "2026";
+let secretBuffer = "";
+
+function add(val) {
+  const display = document.getElementById("display");
+
+  if (display.innerText === "0") display.innerText = val;
+  else display.innerText += val;
+
+  // secret code listener (numbers only)
+  if (!isNaN(val)) {
+    secretBuffer += val;
+
+    if (!CHRISTMAS_CODE.startsWith(secretBuffer)) {
+      secretBuffer = val;
+    }
+
+    if (secretBuffer === CHRISTMAS_CODE) {
+      window.location.href = "christmas.html";
+    }
+  }
+}
+
